@@ -1,0 +1,9 @@
+# main.py
+import uvicorn
+from config import default_config
+from server import create_app
+
+app = create_app()
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=default_config.port)
